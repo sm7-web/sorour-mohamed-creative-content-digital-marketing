@@ -1,0 +1,9 @@
+Deploy this Python 3.11 + SQLite web application (`sorour-portfolio`) to a live public HTTPS hosting service (e.g., Render, Railway, Fly.io, or Replit).
+
+Requirements:
+- No pip packages are required (100% Python 3.11+ standard library).
+- Start command: `python3 server.py` (reads `PORT` and `HOST=0.0.0.0` from environment variables automatically).
+- Included deployment configs: `Dockerfile`, `Procfile`, and `render.yaml`.
+- Set environment variables `ADMIN_EMAIL` and `ADMIN_PASSWORD` (do not hardcode credentials), plus `SITE_URL` to the deployed HTTPS domain.
+- Attach persistent storage for `./data` (SQLite DB) and `./uploads` if the host supports persistent volumes.
+- If deploying as a static site only (e.g., Netlify/Vercel/GitHub Pages), publish the `public/` folder directly (`public/index.html` is completely self-contained).
